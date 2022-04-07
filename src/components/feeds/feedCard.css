@@ -1,0 +1,50 @@
+.feeds .feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+.feedHead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedUser {
+  display: flex;
+  gap: 1rem;
+}
+
+.feedPhoto {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.feedActionBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.feedLikedBy {
+  display: flex;
+}
+
+.feedLikedBy span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+/* .feedLikedBy p {
+  margin-left: 0.5rem;
+} */
