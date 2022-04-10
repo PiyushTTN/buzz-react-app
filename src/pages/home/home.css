@@ -1,0 +1,19 @@
+#main-section {
+  position: relative;
+  top: 5.4rem;
+}
+
+#main-section .container {
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+.rightSection {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  /* top: 5.4rem; */
+  bottom: 0;
+}

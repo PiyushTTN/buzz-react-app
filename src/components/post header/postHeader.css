@@ -1,0 +1,19 @@
+.postHeaderCreatePost {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+  height: 3.5rem;
+}
+
+.postHeaderCreatePost input[type="text"] {
+  width: 100%;
+  justify-self: start;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
