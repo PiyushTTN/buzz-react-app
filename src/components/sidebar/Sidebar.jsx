@@ -28,18 +28,18 @@ function Sidebar() {
             </span>
             <h3>Explore</h3>
           </a>
-          <a className="sidebarMenuItem" id="notifications" href="/">
+          {/* <a className="sidebarMenuItem" id="notifications" href="/">
             <span>
               <i class="uil uil-bell">
                 <small className="notification-count">9+</small>
               </i>
             </span>
-            <h3>Notifications</h3>
-            {/* Notification Popup */}
-            {/* <div className="notificationPopup">
+            <h3>Notifications</h3> */}
+          {/* Notification Popup */}
+          {/* <div className="notificationPopup">
               <Popup />
             </div> */}
-            {/* <NotificationPopUp
+          {/* <NotificationPopUp
               profilePic={NotificationPic}
               userName="John Doe"
               msg="accepted your friend request"
@@ -63,15 +63,15 @@ function Sidebar() {
               msg="accepted your friend request"
               timeMsg="2m ago"
             /> */}
-          </a>
-          <a className="sidebarMenuItem" id="messages-notification" href="/">
+          {/* </a> */}
+          {/* <a className="sidebarMenuItem" id="messages-notification" href="/">
             <span>
               <i class="uil uil-envelope-alt">
                 <small className="notification-count">6</small>
               </i>
             </span>
             <h3>Messages</h3>
-          </a>
+          </a> */}
           <a className="sidebarMenuItem" href="/">
             <span>
               <i class="uil uil-bookmark"></i>
