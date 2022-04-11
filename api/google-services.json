@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "322638972399",
+    "project_id": "buzz-app-d344a",
+    "storage_bucket": "buzz-app-d344a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322638972399:android:9aa7c4c9701bcd0dfee21a",
+        "android_client_info": {
+          "package_name": "host.exp.exponent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322638972399-vgtkh5g32817kqaqdem2apkvubmasil5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNgW9HaTlHj54EZwNS89QCi8hJUGOREFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322638972399-vgtkh5g32817kqaqdem2apkvubmasil5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "322638972399-g7dvfpic7bkatbrgt0ivsg4oiuut86so.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "host.exp.exponent"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

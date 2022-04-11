@@ -1,5 +1,5 @@
 import React from "react";
-import Feed from "../../components/feeds/Feed";
+import Feed from "../../components/feeds/Feed"
 import PostHeader from "../../components/post header/PostHeader";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
