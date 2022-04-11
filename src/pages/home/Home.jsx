@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import Feed from "../../components/feeds/Feed";
+=======
+import Feed from "../../components/feeds/Feed"
+>>>>>>> 4859147efb0b9ac16dbc2b1af8ddb3d99f34296d
 import PostHeader from "../../components/post header/PostHeader";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
