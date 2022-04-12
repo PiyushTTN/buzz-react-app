@@ -3,6 +3,12 @@ import TTNLogo from "../../assets/images/TTN-logo.jpg";
 import "./Form.css";
 
 function LeftSide() {
+  // const[email, setEmail] = useState("");
+  // const[password, setPassword] = useState("");
+  // const[error, setError] = useState("");
+
+
+
   return (
     <>
       <div className="FormLeft">

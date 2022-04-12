@@ -13,10 +13,10 @@ function App() {
     <>  <Router>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="login" element={<Form/>} />
-          {/* <Route exact path='/' element={ user ? <Home /> : <Register /> } />
-          <Route exact path='/login' element={ user ? <Redirect to ='/' /> : <Form />} />  
-          <Route exact path='/register' element={user ? <Redirect to ='/' /> : <Register />}  /> */}
+            {/* <Route path="login" element={<Form/>} /> */}
+          {/* <Route exact path='/' element={ user ? <Home /> : <Sign in  /> } /> */}
+           <Route exact path='/login' element={ user ? <Redirect to ='/' /> : <Form />} />  
+          {/* <Route exact path='/register' element={user ? <Redirect to ='/' /> : <Register />}  /> */}
           </Routes>
         </Router>
 

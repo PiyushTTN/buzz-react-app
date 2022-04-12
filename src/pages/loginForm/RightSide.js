@@ -47,11 +47,11 @@ console.log(user);
             <br />
             <input type="checkbox" className="FormCheckbox-btn" />
             <label htmlFor="checkbox-btn">Remember Me</label>
-            <a href="/" className="FormText">
+            <a href="#" className="FormText">
               Forgot password?
             </a>
             <div className="FormBottom-button">
-            <button type="submit" className="FormButton1" disabled ={isAuthenticated}>
+            <button type="submit" className="FormButton1" disabled ={isAuthenticated} >
             {isAuthenticated ? <CircularProgress  color="white" size="20px"/> : "Sign in "}</button>
           </div>
           <div className="FormBottom-button">
