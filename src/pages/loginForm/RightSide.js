@@ -1,25 +1,23 @@
-import React,{useRef, useContext} from "react";
+import React, { useRef, useContext } from "react";
 import "./Form.css";
-import {LoginCall} from '../../components/apiCalls';
+import { LoginCall } from "../../components/apiCalls";
 import { AuthContext } from "../../components/context/AuthContext";
-import {CircularProgress} from '@material-ui/core';
-
+import { CircularProgress } from "@material-ui/core";
 
 function RightSide() {
-  const email= useRef();
-  const password= useRef();
-  const {isAuthenticated,user, error, dispatch}= useContext(AuthContext);
+  const email = useRef();
+  const password = useRef();
+  const { isAuthenticated, user, error, dispatch } = useContext(AuthContext);
 
-
-  const InputHandler = (e) =>{
+  const InputHandler = (e) => {
     e.preventDefault();
     // console.log(email.current.value)
     LoginCall(
-      {email:email.current.value, password:password.current.value},
-       dispatch)
-  }
-console.log(user);
-
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
+  };
+  console.log(user);
 
   return (
     <>
@@ -51,15 +49,19 @@ console.log(user);
               Forgot password?
             </a>
             <div className="FormBottom-button">
-            <button type="submit" className="FormButton1" disabled ={isAuthenticated}>
-            {isAuthenticated ? <CircularProgress  color="white" size="20px"/> : "Sign in "}</button>
-          </div>
-          <div className="FormBottom-button">
-            <button type="submit" className="FormButton1">
-            {isAuthenticated ? <CircularProgress  color="white" size="20px"/> : "Create a new Account "}</button>
-          </div>
+              <button
+                type="submit"
+                className="FormButton1"
+                disabled={isAuthenticated}
+              >
+                {isAuthenticated ? (
+                  <CircularProgress color="white" size="20px" />
+                ) : (
+                  "Sign in "
+                )}
+              </button>
+            </div>
           </form>
-          
         </div>
       </div>
     </>
