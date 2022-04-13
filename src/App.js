@@ -18,7 +18,7 @@ function App() {
       <Router>
         <AuthProvider>
           <Routes>
-            <Route path="/login" element={<Form />} />
+            <Route path="/" element={<Form />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<Profile />}/>
             {/* <Route path="/home/editProfile" element={<editProfile />}/> */}

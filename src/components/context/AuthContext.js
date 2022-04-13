@@ -66,7 +66,7 @@ export const AuthProvider = ({children}) => {
         dispatch({
             type: 'LOGOUT',
         })
-        Navigate('/login');
+        Navigate('/');
     }
    
     const signInWithGoogle= async() => {

@@ -6,7 +6,7 @@ import "./SidebarProfile.css";
 function SidebarProfile(props) {
   return (
     <>
-      <a className="sidebarProfile" href="/">
+      <a className="sidebarProfile" href="/profile">
         <ProfilePhoto profilePic={SidebarProfilePic} />
         <div className="sidebarHandle">
           <h4>{props.SidebarProfileName}</h4>
