@@ -1,4 +1,7 @@
-import { firebase } from "@firebase/app";
+// new v9
+// import { firebase } from "@firebase/app";
+// old method
+// import firebase from "firebase/compat/app";
 // import "firebase/compat/auth";
 // import "firebase/compat/firestore";
 // Import the functions you need from the SDKs you need
@@ -6,6 +9,7 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // import { getAuth } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,6 +22,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const Firebase = initializeApp(firebaseConfig);
 
-export { firebase };
+// export { Firebase };
+export const authentication = getAuth(Firebase);

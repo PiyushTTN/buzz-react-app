@@ -1,22 +1,32 @@
 import React from "react";
 import TTNLogo from "../../assets/images/TTN-logo.jpg";
 import "./Form.css";
-import { firebase } from "../../Firebase/Firebase";
-// import { GoogleAuthProvider } from "firebase/auth";
+
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { authentication } from "./../../Firebase/Firebase";
 
 function LeftSide() {
   const SignInWithFirebase = () => {
-    var google_provider = new firebase.auth.GoogleAuthProvider();
-
-    firebase
-      .auth()
-      .signInWithPopup(google_provider)
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(authentication, provider)
       .then((result) => {
         console.log(result);
       })
       .catch((error) => {
         console.log(error);
       });
+    // var provider = new GoogleAuthProvider();
+    // const auth = getAuth();
+    // var google_provider = new Firebase.auth.GoogleAuthProvider();
+
+    // Firebase.auth()
+    //   .signInWithPopup(google_provider)
+    //   .then((result) => {
+    //     console.log(result);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
   return (
     <>

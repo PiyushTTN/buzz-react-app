@@ -2,7 +2,7 @@ import React, { useRef, useContext } from "react";
 import "./Form.css";
 import { LoginCall } from "../../components/apiCalls";
 import { AuthContext } from "../../components/context/AuthContext";
-import { CircularProgress } from "@material-ui/core";
+// import { CircularProgress } from "@material-ui/core";
 
 function RightSide() {
   const email = useRef();
@@ -55,7 +55,7 @@ function RightSide() {
                 disabled={isAuthenticated}
               >
                 {isAuthenticated ? (
-                  <CircularProgress color="white" size="20px" />
+                  <i class="uil uil-spinner-alt"></i>
                 ) : (
                   "Sign in "
                 )}
@@ -69,3 +69,5 @@ function RightSide() {
 }
 
 export default RightSide;
+
+/* <CircularProgress color="white" size="20px" /> */
