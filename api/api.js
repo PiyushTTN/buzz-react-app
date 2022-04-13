@@ -10,6 +10,7 @@ const userPost= require('./routes/posts');
 const profileRoute= require('./routes/profile');
 const commentRoute= require('./routes/Comment');
 const forgotPasswordRoute= require('./routes/forgotPassword');
+const cors= require('cors');
 
 
 dotenv.config();
@@ -24,7 +25,7 @@ mongoose.connect(process.env.MONGO_URL,
 app.use(express.json());
 app.use(helemt());
 app.use(morgan('common'));
-
+app.use(cors());
 //Routes
 app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);

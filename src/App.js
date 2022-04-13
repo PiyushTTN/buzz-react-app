@@ -1,27 +1,31 @@
-import React, {useContext} from 'react';
-import Home from './pages/home/Home';
-import Form from './pages/loginForm/Form';
-import {BrowserRouter as Router, Route, Routes, Redirect} from 'react-router-dom';
-import {AuthContext} from './components/context/AuthContext';
+import React, { useContext, useEffect } from "react";
+import Home from "./pages/home/Home";
+import Form from "./pages/loginForm/Form";
+import { AuthContext, AuthProvider } from "./components/context/AuthContext";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Redirect,
+} from "react-router-dom";
 
 function App() {
-
-  const {user}= useContext(AuthContext);
-
+  const { user } = useContext(AuthContext);
 
   return (
-    <>  <Router>
+    <>
+      <Router>
+        <AuthProvider>
           <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="login" element={<Form/>} />
-          {/* <Route exact path='/' element={ user ? <Home /> : <Sign in  /> } /> */}
-           {/* <Route exact path='/login' element={ user ? <Redirect to ='/' /> : <Form />} />   */}
-          {/* <Route exact path='/register' element={user ? <Redirect to ='/' /> : <Register />}  /> */}
+            <Route path="/login" element={<Form />} />
+            <Route path="/home" element={<Home />} />
+            {/* <Route path="/home/viewProfile" element={<viewProfile />}/>
+            <Route path="/home/editProfile" element={<editProfile />}/> */}
           </Routes>
-        </Router>
-
+        </AuthProvider>
+      </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,25 +1,33 @@
-import React,{useRef, useContext} from "react";
+import React, { useRef, useContext, useEffect } from "react";
 import "./Form.css";
-import {LoginCall} from '../../components/apiCalls';
+import { LoginCall } from "../../components/apiCalls";
 import { AuthContext } from "../../components/context/AuthContext";
-import {CircularProgress} from '@material-ui/core';
+import { CircularProgress } from "@material-ui/core";
+import {Link, useNavigate} from 'react-router-dom'
 
 
 function RightSide() {
-  const email= useRef();
-  const password= useRef();
-  const {isAuthenticated,user, error, dispatch}= useContext(AuthContext);
+  const email = useRef();
+  const password = useRef();
+  const Navigate = useNavigate();
 
+  const { isAuthenticated, user, error, dispatch } = useContext(AuthContext);
 
-  const InputHandler = (e) =>{
+  const InputHandler = (e) => {
     e.preventDefault();
     // console.log(email.current.value)
     LoginCall(
-      {email:email.current.value, password:password.current.value},
-       dispatch)
-  }
-console.log(user);
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
+  };
+  useEffect (()=>{
+    if(user){
+      return Navigate('/home')
+    }
+  })
 
+  console.log(user);
 
   return (
     <>
@@ -54,12 +62,7 @@ console.log(user);
             <button type="submit" className="FormButton1" disabled ={isAuthenticated} >
             {isAuthenticated ? <CircularProgress  color="white" size="20px"/> : "Sign in "}</button>
           </div>
-          <div className="FormBottom-button">
-            <button type="submit" className="FormButton1">
-            {isAuthenticated ? <CircularProgress  color="white" size="20px"/> : "Create a new Account "}</button>
-          </div>
           </form>
-          
         </div>
       </div>
     </>
@@ -67,3 +70,5 @@ console.log(user);
 }
 
 export default RightSide;
+
+/* <CircularProgress color="white" size="20px" /> */

@@ -2,13 +2,40 @@ import React from "react";
 import TTNLogo from "../../assets/images/TTN-logo.jpg";
 import "./Form.css";
 
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { authentication } from "./../../Firebase/Firebase";
+import { useNavigate } from "react-router-dom";
+import { LoginSuccess } from "../../components/context/AuthAction";
+
+
 function LeftSide() {
-  // const[email, setEmail] = useState("");
-  // const[password, setPassword] = useState("");
-  // const[error, setError] = useState("");
+  const Navigate= useNavigate();
+  const SignInWithFirebase = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(authentication, provider)
+      .then((result) => {
+        if(result){
+          LoginSuccess(result.user);
+          Navigate ('/home');
+          
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // var provider = new GoogleAuthProvider();
+    // const auth = getAuth();
+    // var google_provider = new Firebase.auth.GoogleAuthProvider();
 
-
-
+    // Firebase.auth()
+    //   .signInWithPopup(google_provider)
+    //   .then((result) => {
+    //     console.log(result);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
+  };
   return (
     <>
       <div className="FormLeft">
@@ -22,9 +49,9 @@ function LeftSide() {
           <p> Don't stop until you're proud.</p>
         </div>
         <br />
-        <a href="/" className="FormBtn">
-          <span>Sign in with Google</span>
-        </a>
+        <button className="FormBtn" onClick={SignInWithFirebase}>
+          Sign in with Google
+        </button>
       </div>
     </>
   );

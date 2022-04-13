@@ -34,3 +34,17 @@
   align-items: center;
   gap: 2rem;
 }
+
+.logOut-btn{
+  border: none;
+  background: tr;
+  border-radius: 15px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+
+}
