@@ -10,10 +10,19 @@ function LeftSide() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(authentication, provider)
       .then((result) => {
-        console.log(result);
+        const email = result.user.email;
+        let emailLast = email.split("@");
+        let emailLastName = emailLast[1];
+        if (emailLastName === "tothenew.com") {
+          console.log("TTN");
+        } else {
+          console.log("Not TTN");
+        }
       })
       .catch((error) => {
         console.log(error);
+        const email = error.email;
+        console.log(email);
       });
     // var provider = new GoogleAuthProvider();
     // const auth = getAuth();
