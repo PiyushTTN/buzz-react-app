@@ -8,6 +8,7 @@ import {
   Routes,
   Redirect,
 } from "react-router-dom";
+import Profile from "./pages/profile/Profile";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -19,8 +20,9 @@ function App() {
           <Routes>
             <Route path="/login" element={<Form />} />
             <Route path="/home" element={<Home />} />
-            {/* <Route path="/home/viewProfile" element={<viewProfile />}/>
-            <Route path="/home/editProfile" element={<editProfile />}/> */}
+            <Route path="/profile" element={<Profile />}/>
+            {/* <Route path="/home/editProfile" element={<editProfile />}/> */}
+            {/* <Route path="/profile" element={<Profile />} /> */}
           </Routes>
         </AuthProvider>
       </Router>

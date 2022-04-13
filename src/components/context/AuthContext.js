@@ -36,7 +36,7 @@ export const AuthProvider = ({children}) => {
                 const getUserData= async()=>{
                     const token= await authentication.currentUser.getIdToken();
                     await axios
-                    .post(`http://127.0.0.1:5000/api/auth/login`)
+                    .post(`http://127.0.0.1:5000/api/auth/register`)
                     .then(res=>{
                         setUserData(res.data)
                     })

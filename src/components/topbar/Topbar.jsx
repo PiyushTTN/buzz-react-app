@@ -42,7 +42,7 @@ function Topbar() {
               <img src={TopbarProfilePic} alt="" />
             </div> */}
             <ProfilePhoto profilePic={TopbarProfilePic} />
-            <button className="logOut-btn" type="button" onClick= {()=>logOut()}> Log Out </button>
+            <button className="logOut-btn" type="button" onClick={()=>logOut()}> Log Out </button>
           </div>
         </div>
       </div>
