@@ -55,7 +55,7 @@ function RightSide() {
                 disabled={isAuthenticated}
               >
                 {isAuthenticated ? (
-                  <i class="uil uil-spinner-alt"></i>
+                  <i className="uil uil-spinner-alt"></i>
                 ) : (
                   "Sign in "
                 )}

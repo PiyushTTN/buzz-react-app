@@ -98,3 +98,40 @@ img {
   font-size: 0.9rem;
   color: var(--color-dark);
 }
+
+/* Laptops and big screens */
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+  #main-section .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+  .endSidebarBtn {
+    display: none;
+  }
+  .sidebarLeft .sidebarProfile {
+    display: none;
+  }
+  .sidebarLeft h3 {
+    display: none;
+  }
+}
+
+/* mobile and small tablets */
+@media screen and (max-width: 992px) {
+  .topbarSearchBar {
+    display: none;
+  }
+  #main-section .container {
+    /* grid-template-columns: 0 auto 5rem; */
+    display: flex;
+  }
+  .sidebarLeft {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+  }
+}
